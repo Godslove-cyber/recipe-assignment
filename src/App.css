@@ -1,53 +1,118 @@
-.Background{
-    position: relative;
-    height: 100vh;
-    width: 80%;
-    background-color:bisque;
-}
-
-
-.Recipe-Container-Front-Project{
-    position: relative;
-    width: 80%;
-    margin: 40px auto;
-    padding: 20px;
-    background-color:white;
-    box-shadow: (0,0,0, 0.2);
-    z-index: 1;
+main{
+    background-color:var(--White);
+    padding: 50px;
     border-radius: 20px;
+    width: 60%;
+    margin: auto;
 }
 
-.Recipe-Container-Back-Project{
-    position: relative;
-    width: 80%;
-    top: 40px auto;
+ul, ol{
+    display: grid;
+    gap: 10px;
+}
+
+.pic{
+border-radius: 10px;
+overflow: hidden;
+}
+
+main h1{
+color: var(--stone-900);
+padding-block: 20px;
+}
+
+main > p{
+    padding-bottom: 20px;
+}
+                             
+.prep{
+    background-color:var(--Rose-50);
+
+}
+.prep h3{
+    color: var(--Rose-800);
+    margin-bottom: 20px;
+}
+
+.Prep > ul li{
+    display: grid;
+} 
+
+.bold{
+    font-weight: 700;
+}
+
+.wrapper{
+    padding-block: 30px;
+    border-bottom: 1pxsolid var(--Stone-150);
+    display: grid;
+    gap: 20px;
+}
+
+.nutrition {
+    padding-block: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.nutrition ul {
+    list-style: none;
+}
+
+.nutrition ul li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--Stone-150);
+    margin: 0;
+    padding: 10px 40px;
+}
+
+.values {
+    font-weight: 700;
+    color: var(--Brown-800);
+}
+
+
+
+/*mobile-design*/
+
+@media (max-width: 375px) {
+  main {
+    width: 95%;
     padding: 20px;
-    right: -400px;
-    background-color:white;
-    box-shadow: (0,0,0, 0.2);
-    z-index: 1;
-    border-radius: 10px;
-    transform: scale(0.9);
-}
-img{
-    width: 100%;
-    height: 200%;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    margin-top: 1%;
-    margin-bottom: 5%;
-}
+  }
 
-h4{
-    background-color: rgb(204, 228, 236);
-}
+  ul, ol {
+    gap: 8px;
+  }
 
-.Recipe-Container-Offset{
-    position: absolute;
-    top:5px;
-    left: 5px;
-    width: 50%;
-    opacity: 0.5;
-    z-index: -1;
-}
+  .wrapper {
+    padding-block: 20px;
+    gap: 15px;
+  }
 
+  .nutrition ul li {
+    padding: 10px 20px;
+  }
+
+  .pic {
+    border-radius: 8px;
+  }
+
+  main h1 {
+    padding-block: 15px;
+  }
+
+  main > p {
+    padding-bottom: 15px;
+  }
+
+  .prep h3 {
+    margin-bottom: 15px;
+  }
+
+  .nutrition {
+    padding-block: 20px;
+    gap: 15px;
+  }
+}
